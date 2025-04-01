@@ -1,0 +1,16 @@
+[project]
+name = "word-mcp"
+version = "0.1.0"
+description = "word-mcp"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "python-docx>=0.6.0",
+    "Pillow>=10.0.0",
+    "mcp[cli]>=1.0.0",
+    "httpx>=0.28.1",
+    "reportlab>=4.3.1",
+    "PyPDF2>=3.0.1",
+    "jieba>=0.42.1",
+    "matplotlib>=3.9.2",
+]
