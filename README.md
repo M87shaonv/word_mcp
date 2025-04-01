@@ -96,3 +96,63 @@
 
 ## Installation 安装
 
+1. 将 MCP 服务器的代码仓库克隆到您的本地机器:
+    ```bash
+    git clone https://github.com/M87shaonv/word_mcp.git
+    cd word_mcp
+    ```
+2. 安装依赖项
+使用 pip/pip3 安装所需的 Python 包：
+    ```bash
+   pip install -e 项目路径 
+   pip3 install -e 项目路径
+    ```
+
+3. 配置环境变量（可选）
+您可以配置以下环境变量来自定义服务器行为：
+
+    | 变量名             | 描述                    | 默认值   |
+    |-----------------|-----------------------|-------|
+    | `WORD_MCP_PATH` | 文件操作的默认目录(例如:保存文档的位置) | 用户的桌面 |
+
+Linux/Mac
+```bash
+    # 永久设置环境变量
+    nano ~/.bashrc
+    # 文件末尾添加以下内容
+    export WORD_MCP_PATH="/path/to/output"
+    # 刷新环境变量
+    source ~/.bashrc
+```
+Windows
+```bash
+    # 设置系统级别的环境变量
+    set WORD_MCP_PATH="C:\path\to\output" /M
+```
+
+4. 启动服务器
+使用以下命令启动 MCP 服务器测试是否正常运行：
+```bash
+    # 启动服务器
+    python word_mcp.py
+    # 如果在启动服务器时出现模块导入错误，尝试使用以下命令更新依赖项：
+    uv run word_mcp.py
+    # 使用mcp命令启动服务器可在浏览器中访问 测试是否正常运行
+    mcp dev word_mcp.py
+```
+
+注意：如果使用的是虚拟环境，请确保在启动服务器之前激活虚拟环境
+
+使用mcp server配置,直接添加到`cline_mcp_setting.json`文件中
+```bash
+ # 
+    "wordmcp": {
+          "command": "uv",
+          "args": [
+            "--directory",
+            "下载的word_mcp项目路径",
+            "run",
+            "word_mcp.py"
+          ]
+        }
+```

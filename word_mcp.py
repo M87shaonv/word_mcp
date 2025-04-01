@@ -2375,4 +2375,5 @@ def response_handler(response):
 # 严格性 allow_nan=False
 
 if __name__ == "__main__":
+    print("word_mcp is running...")
     mcp.run()
