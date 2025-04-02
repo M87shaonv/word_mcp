@@ -4,7 +4,10 @@
 
 一个模型上下文协议服务器，用于操作和处理 Word 文档  
 此服务器提供了一系列工具，用于创建、编辑、转换Word文档，支持格式转换、复杂文本查询替换、文档合并,提取数据,文档对比,文档质量评估功能
-
+![word_mcp](images/word_mcp.png)  
+## Example 示例
+![word_mcp1](images/word_mcp1.png)
+![word_mcp2](images/word_mcp2.png)
 ## Tools 工具
 
 1. `create_txt_file`
